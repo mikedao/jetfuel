@@ -14,7 +14,7 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
-  config.default_formatter = 'doc'
+  config.default_formatter = "doc"
 
   config.profile_examples = 10
 
