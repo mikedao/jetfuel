@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "awesome_print", require:"ap"
 gem "puma"
 gem 'rails', '4.2.0'
 gem 'pg'
@@ -20,4 +21,9 @@ group :development, :test do
   gem 'spring'
   gem "capybara"
   gem "rspec-rails"
+end
+
+group :development do
+  gem "better_errors"
+  gem "quiet_assets"
 end
