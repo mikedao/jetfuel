@@ -1,6 +1,9 @@
 require "simplecov"
 require "rails_helper"
 require "capybara/rspec"
+require "factory_girl_rails"
+require "support/factory_girl"
+
 SimpleCov.start
 
 RSpec.configure do |config|
