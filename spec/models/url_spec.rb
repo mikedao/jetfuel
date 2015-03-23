@@ -6,4 +6,10 @@ RSpec.describe Url, type: :model do
 
     expect(url.long).to eq("http://google.com")
   end
+
+  it "starts with a count of zero" do
+    url = Url.create(long: "http://google.com")
+
+    expect(url.count).to eq 0
+  end
 end
