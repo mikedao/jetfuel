@@ -29,3 +29,7 @@ group :development do
   gem "better_errors"
   gem "quiet_assets"
 end
+
+group :test do
+  gem "launchy"
+end

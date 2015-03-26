@@ -1,0 +1,14 @@
+<h1>JetFuel</h1>
+<p>
+<%= form_for @url, url: {action: "create"} do |f| %>
+  <%= f.label "URL" %>
+  <%= f.text_field :long %>
+  <%= f.submit "Shorten URL" %>
+<% end %>
+</p>
+
+  <% @urls.each do |single_url| %>
+  </p>
+  <%= single_url.long %>
+  </p>
+<% end %>
