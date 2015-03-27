@@ -6,7 +6,11 @@ class UrlsController < ApplicationController
 
   def create
     url = Url.create(url_long)
-    redirect_to root_path
+    redirect_to url_path(url)
+  end
+
+  def show
+    @url = Url.find(params[:id])
   end
 
   private

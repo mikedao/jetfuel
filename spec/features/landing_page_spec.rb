@@ -24,5 +24,6 @@ RSpec.describe "Adding URLs", type: :feature do
     click_link_or_button "Shorten URL"
 
     expect(page).to have_content("turing.io")
+    expect(current_path).to eq(url_path(Url.last.id))
   end
 end
