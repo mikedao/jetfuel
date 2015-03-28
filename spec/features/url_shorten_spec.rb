@@ -9,7 +9,5 @@ RSpec.describe "shorten urls", type: :feature do
 
     expect(page).to have_content("turing.io")
     expect(page).to have_content(Url.last.short)
-
   end
 end
-
