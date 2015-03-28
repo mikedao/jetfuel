@@ -5,7 +5,7 @@ class UrlsController < ApplicationController
   end
 
   def create
-    url = Url.create(url_long)
+    url = Url.find_or_create_by(url_long)
     redirect_to url_path(url)
   end
 
