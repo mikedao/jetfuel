@@ -1,6 +1,6 @@
-require 'rails_helper'
+require "rails_helper"
 
-RSpec.describe RedirectController, :type => :controller do
+RSpec.describe RedirectController, type: :controller do
   it "redirects to a site" do
     url = create(:url)
 
