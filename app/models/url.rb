@@ -2,6 +2,10 @@ class Url < ActiveRecord::Base
   after_create :post_create
 
   validates :short, uniqueness: true
+  def increment
+    self.count += 1
+    save
+  end
   private
 
   def post_create
