@@ -6,12 +6,19 @@
   <%= f.submit "Shorten URL" %>
 <% end %>
 </p>
-
+<table>
+  <tr>
+    <th>Long Url</th>
+    <th>Short Url</th>
+    <th>Title</th>
+    <th>Count</th>
+  </tr>
   <% @urls.each do |single_url| %>
-  </p>
-  <%= single_url.long %>
-  </p>
-  </p>
-  <%= single_url.short %>
-  </p>
-<% end %>
+    <tr>
+      <td><%= single_url.long %></td>
+      <td><%= link_to single_url.short, single_url.long %></td>
+      <td><%= single_url.title %></td>
+      <td><%= single_url.count %></td>
+    </tr>
+  <% end %>
+</table>
