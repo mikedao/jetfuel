@@ -6,6 +6,7 @@ class Url < ActiveRecord::Base
     self.count += 1
     save
   end
+
   private
 
   def post_create
