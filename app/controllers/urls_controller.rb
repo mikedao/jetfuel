@@ -6,6 +6,7 @@ class UrlsController < ApplicationController
 
   def create
     url = Url.find_or_create_by(url_long)
+    TitleWorker.perform_async(url.long) if url
     redirect_to url_path(url)
   end
 

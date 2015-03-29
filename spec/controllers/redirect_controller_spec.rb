@@ -10,4 +10,12 @@ RSpec.describe RedirectController, type: :controller do
     expect(response.body).to include("redirect")
     expect(response.body).to include(url.long)
   end
+
+  it "redirects non existant requests to main page" do
+    create(:url)
+
+    visit "http://localhost:3000/aaaaaa"
+
+    expect(current_path).to eq(root_path)
+  end
 end
