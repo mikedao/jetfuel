@@ -12,7 +12,7 @@ RSpec.describe RedirectController, type: :controller do
   end
 
   it "redirects non existant requests to main page" do
-    url = create(:url)
+    create(:url)
 
     visit "http://localhost:3000/aaaaaa"
 

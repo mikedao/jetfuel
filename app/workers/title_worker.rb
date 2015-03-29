@@ -7,7 +7,7 @@ class TitleWorker
     if response.body.match(/(?<=<TITLE>).*(?=<\/TITLE>)/)
       title = response.body.match(/(?<=<TITLE>).*(?=<\/TITLE>)/)
     else
-      title =  response.body.match(/(?<=<title>).*(?=<\/title>)/)
+      title = response.body.match(/(?<=<title>).*(?=<\/title>)/)
     end
 
     stored_url = Url.find_by(long: url)
