@@ -7,6 +7,14 @@ class Url < ActiveRecord::Base
     save
   end
 
+  def self.sorted_by_count
+    all.sort_by(&:count).reverse
+  end
+
+  def self.sorted_by_date
+    all.sort_by(&:created_at).reverse
+  end
+
   private
 
   def post_create
