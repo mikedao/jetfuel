@@ -5,4 +5,3 @@ class Api::V1::UrlsController < ApplicationController
     respond_with Url.find_by(long: params[:long])
   end
 end
-
