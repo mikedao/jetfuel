@@ -1,6 +1,7 @@
 class UrlsController < ApplicationController
   def index
-    @urls = Url.all
+    @urls_count = Url.sorted_by_count
+    @urls_date = Url.sorted_by_date
     @url = Url.new
   end
 
